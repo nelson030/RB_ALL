@@ -1,0 +1,49 @@
+Problem
+- Implement octal to decimal conversion. Given an octal input string, your 
+program should produce a decimal output. Treat invalid input as octal 0.
+
+Definitions:
+- Decimal numbers are a base 10 system
+  - ex: 233 # decimal
+        = 2*10^2 + 3*10^1 + 3*10^0
+        = 2*100  + 3*10   + 3*1
+        = 233
+- Octal numbers are base 8 system
+  - ex: 233 # base8
+        = 2*8^2 + 3*8^1 + 3*8^0
+        = 2*64  + 3*8   + 3*1
+        = 128   + 24    + 3
+        = 155
+        
+Req's:
+- If there is any v
+
+Examples:
+- shown above
+- GIVEN tests
+
+Data Structure
+- Input: String
+- Output: integer
+
+- determine value at each place (ones, tens, etc.)
+  - convert value from String -> Integer
+  - multiply value by respective base 8
+  
+- sum all base8 place values and return that value
+
+Algorithm
+- constructor
+  - input a string
+  - store in attr_reader
+- #to_decimal
+  - no input
+  - determine length of string to determine how many place values needed
+  to sum
+  - convert to Integer and evaluate place values as base 8
+    - use iterating method #times on string length
+      - each num represents power value
+      - iterate backwards through num_str
+  - return sum of all base 8 place values
+
+Code

@@ -1,0 +1,41 @@
+Problem
+
+- Give month and year when creating an object. Then, be able to
+find the correct date (Date object) given two arguments
+(dayofweek, #ofoccurence)
+
+- For instance, if you ask for the 2nd Wednesday of May 2021, 
+the object should be able to determine that the meetup for 
+that month will occur on the 12th of May, 2021.
+
+
+Example:
+- Meetup.new(2013, 3).day('Monday', 'first') == 
+Date.civil(2013, 3, 4)
+
+- GIVEN
+
+Data Structure:
+- input: 2 integers (year, month)
+  - also 2 strings (day, occurence)
+- output: Date object
+
+- store year and month in instance variables
+
+Algorithm:
+- Constructor
+  - store year and month as integer values as instance variables
+- #day
+  - assign 2 strings (day_str, occurence)
+  - change occurence into an integer or an array of a range
+  - create integer = 1 (day)
+  - cycle through the month of the year given
+    - determine if the Date object with that day satisfies
+    both day_str and occurence requirements
+  - return the Date object
+  
+- #assign_occurences
+  - cycle through given month/year
+    - assign each occurence for each day of month
+      - ie for the first monday -> {"1st Monday" => Date.civil(2013, 4, 1) }
+    - return hash

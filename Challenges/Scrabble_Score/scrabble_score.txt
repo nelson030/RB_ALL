@@ -1,0 +1,37 @@
+Problem
+- create a program that returns the score of a given word
+
+- Scores:
+A, E, I, O, U, L, N, R, S, T = 1
+D, G-------------------------= 2
+B, C, M, P~~~~~~~~~~~~~~~~~~~= 3
+F, H, V, W, Y````````````````= 4
+K----------------------------= 5
+J, X~~~~~~~~~~~~~~~~~~~~~~~~~= 8
+Q, Z`````````````````````````= 10
+
+Exceptions
+- if empty string => 0
+- if nil => 0
+- if characters other than letters are included => 0
+
+Examples:
+- GIVEN
+
+Data Structure:
+- input: string (word)
+- print nothing
+- return: integer (score value of combined letters)
+
+Algorithm:
+- Contructor
+  - store string (word) in attr_reader
+- #score
+  - iterate through letters of word (using #each)
+    - determine if valid
+      - valid meaning it only contains letters
+    - determine score of each letter
+    - add that letter score to sum
+  - return sum
+
+Code

@@ -1,0 +1,65 @@
+Problem
+- A program that creates a diamond shape with ascending letters, then descending
+leeters
+
+Requirements:
+- The first row contains one 'A'.
+- The last row contains one 'A'.
+- All rows, except the first and last, have exactly two identical letters.
+- The diamond is horizontally symmetric.
+- The diamond is vertically symmetric.
+- The diamond has a square shape (width equals height).
+- The letters form a diamond shape.
+- The top half has the letters in ascending order.
+- The bottom half has the letters in descending order.
+- The four corners (containing the spaces) are triangles.
+
+Examples:
+- input: 'A'
+A
+
+- input: 'C'
+  A
+ B B
+C   C  = spaces 3
+ B B
+  A
+
+input: 'E'
+    A
+   B B
+  C   C
+ D     D
+E       E  = spaces 7
+ D     D
+  C   C
+   B B
+    A
+
+input: 'G'
+      A
+     B B
+    C   C
+   D     D
+  E       E  = spaces 7
+ F         F
+G           G
+ D     D
+  C   C
+   B B
+    A
+    
+formula: ((letter.index - 1) * 2) + 1
+
+Data Structure:
+- input: string (single letter)
+- output: string (diamond shape)
+
+Algorithm:
+- ::make_diamond
+  - take letter input
+  - determine place in Alphabet (using constant array)
+  - iterate through the number of place in alphabet
+    - create top of diamond and middle
+  - iterate through the number of place in alphabet minus 1
+    - create bottom of diamond

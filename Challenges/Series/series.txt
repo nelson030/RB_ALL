@@ -1,0 +1,28 @@
+Problem
+- Create a program that returns all possible consecutive number sequences
+for a given length
+
+Examples:
+- For example, the string "01234" has the following 3-digit series:
+012
+123
+234
+
+- And here are the 4-digit series:
+0123
+1234
+
+- GIVEN
+
+Data Structure:
+input: string (number sequence) and integer (length to evaluate)
+output: array of arrays (containing valid sequences)
+
+Algorithm:
+- Constructor
+  - store string of the number sequence
+- #slices
+  - take input of length to evaluate
+  - iterate through the string by chunks of the specified length
+    - append each sequence to an array that are of consecutive values
+  - return array

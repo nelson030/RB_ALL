@@ -1,0 +1,35 @@
+Problem:
+- Create a program that assigns robot names.
+- Names cannot be assigned twice
+- must follow regexp guidelines of /^[A-Z]{2}\d{3}$/
+
+Examples:
+- valid examples: AX142, FG930, LQ029
+- invalid examples: aX142, FGR390, LF1254
+
+- GIVEN test
+
+Data Structure:
+- input: none
+- print nothing
+- output: short string correlating to the robot serial number
+
+- use class variable to make sure we don't use serial numbers more than once
+
+Algorithm:
+- set class variable array to empty
+
+- Constructor
+  - set @name to nil
+  - call #name
+- #name
+  - use a loop to create a new name for the robot
+    - break loop if @name != nil
+    - check if random generated string matches already assigned name
+      - break if loop if name is unique
+      - restart loop if not unique
+    - store @name as a attr_reader :name
+    - add @name to @@name_arr
+    - return @name
+- #reset
+  - set @name to nil

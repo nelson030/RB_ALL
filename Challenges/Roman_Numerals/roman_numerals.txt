@@ -1,0 +1,37 @@
+Problem
+- Create program that converts integer into Roman numeral equivalent
+
+Definitions:
+- I = 1
+- V = 5
+- X = 10
+- L = 50
+- C = 100
+- D = 500
+- M = 1000
+
+Questions:
+- How to create an algorithm that doesnt need every input, but can calculate itself?
+  - Or does every input need to be specified?
+- What is the pattern to roman numerals?
+
+Examples
+- GIVEN
+
+Data Structure
+- Input an integer into constructor. Save that as year value
+- #to_roman method converts integer into string representing Roman numeral
+
+Algorithm
+- Contructor
+  - input and store integer as year
+- #to_roman
+  - convert number to Rom num
+    - HOW?
+      - have different methods to convert the different place (ones, tens,
+      hundreds, thousands)
+      - combine the roman numerals in correct order
+  - return string
+  - no output
+
+Code

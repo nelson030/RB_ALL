@@ -1,0 +1,54 @@
+Problem
+- Create a program that determines whether a number is perfect, abundant, 
+or deficient.
+
+Definitions:
+- Aliquot sum: sum of all divisors of a number
+- perfect: When Aliquot sum == number itself
+- Abundant: When Aliquot sum > number itself
+- Deficient: When Aliquot sum < number itself
+
+Requirements:
+- Natural numbers ONLY (positive integers greater than 0)
+
+Examples
+- 6 is a perfect number since its divisors are 
+1, 2, and 3, and 1 + 2 + 3 = 6.
+
+- 28 is a perfect number since its divisors are 
+1, 2, 4, 7, and 14 and 1 + 2 + 4 + 7 + 14 = 28.
+
+- 15 is a deficient number since its divisors are 
+1, 3, and 5 and 1 + 3 + 5 = 9 which is less than 15.
+
+- 24 is an abundant number since its divisors are 
+1, 2, 3, 4, 6, 8, and 12 and 1 + 2 + 3 + 4 + 6 + 8 + 12 = 36 which is greater than 24.
+
+- Prime numbers 7, 13, etc. 
+are always deficient since their only divisor is 1.
+
+- GIVEN test code
+
+Data Structure
+- input: integer
+- print nothing
+- output: string (perfect, abundant, or deficient)
+
+- iterating method that determines all divisors of number
+  - either store in array, or sum them as you iterate
+  - store value for Aliquot sum as integer
+
+Algorithm
+- ::classify
+  - Class method
+  - input a natural number
+  - set a sum value to 0
+  - Use #times to iterate all numbers 
+    - Make sure to specify (num + 1) to account for the #times method
+    starting at 0 and ending before the number given
+    - add num to sum if a divisor
+  - compare sum to num using case/when
+    
+  
+
+Code

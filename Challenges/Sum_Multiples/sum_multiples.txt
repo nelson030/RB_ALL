@@ -1,0 +1,26 @@
+Problem
+- Write a program that, given a natural number and a 
+set of one or more other numbers, can find the sum of 
+all the multiples of the numbers in the set that are 
+less than the first number. 
+If the set of numbers is not given, use a default set 
+of 3 and 5.
+
+Examples
+- GIVEN
+
+Data Structure
+- 2 inputs: integer (natural number) and array of integers (maybe)
+- output: integer (sum of multiples)
+
+Algorithm
+- Contructor
+  - create an attr_readr for array of numbers of given input(s)
+  - sort! array
+- ::to(num)
+  - create a new SumOfMultiples object
+  - call and return #to(num)
+- #to(num)
+  - iterate every number (excluding num) to num
+  - sum multiples of each num of array
+  - return sum

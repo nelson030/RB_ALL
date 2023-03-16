@@ -1,0 +1,55 @@
+Problem:
+- Create a clock that is independent of date
+  - What does that mean? Only time and no date?
+- add or subtract minutes from the time represented by the Clock
+object
+  - do NOT mutate clock objects, create new Clock objects when changing
+  minutes
+- two Clock objects at same time should return true for #==
+- only use math, no built in date/time functions
+- Only show hour/minutes
+- Assume military time
+
+Examples:
+- '08:00' == Clock.at(8).to_s
+- '09:00' == Clock.at(9).to_s
+- '11:09' == Clock.at(11, 9).to_s
+- GIVEN
+
+Data Structure:
+- input: 2 numbers (hour, and minute with default of 0)
+- output: string using to_s (time as 'hh:mm')
+
+- create instance variables for hours and minutes of each
+object made
+- call to_s to turn the time into a string
+
+Algorithm:
+- ::at(hour, min=0)
+  - create/return a new clock object with user inputs
+- Constructor
+  - create @hours and @minutes, per repective input
+- #to_s
+  - make sure both min and hour are 2 digit numbers
+    - use #insert if num.to_s.length is 1
+  - return "#{@hours}:#{@minutes}"
+- #+(num)
+  - set local variables to @hours and @minutes (use #dup)
+  - Add minutes to time
+    - if (num + min) is greater than 59
+      - then add 1 to hour
+      - subtract mins from num
+      - add that to mins
+    - else
+      just add num to mins
+  - create and return a new Clock object with new hours/mins
+- #-(num)
+  - set local variables to @hours and @minutes (use #dup)
+  - subtract minutes from time
+    - if num is greater than mins
+      - then subtract 1 from hour
+      - subtract 60 from num
+      - subtract that from mins (which will be adding actually)
+    - else
+      just subtract num from @minutes
+  - create and return a new Clock object with new hours/mins

@@ -1,0 +1,64 @@
+Problem
+- create a program that allows to create objects of singly linked lists
+from a range of data
+Functions:
+- reverse
+- convert to/from array
+
+Singly Linked List:
+- each element in list contains data
+- there is a 'next' field pointing to the next set of data
+- example is LIFO model
+
+Definitions:
+- tail = last item on linked list
+- head = first item on linked list
+
+Examples:
+- GIVEN
+
+Data Structure:
+- input: data of some sort into element objects
+  - then input element objects into linked list
+- output: varying responses of methods
+
+- create element objects with their instance methods
+- then create simple linked lists that take the element objects
+
+Algorithm:
+
+Element:
+- contructor
+  - input some data (our tests have integer)
+  - input :next element (default nil)
+- #datum
+  - getter for data assigned to element contructor
+- #tail?
+  - return last element of linked elements
+  
+SimpleLinkedList:
+- constructor
+  - create empty array to keep track of elements
+- #size
+  - return list size
+- #empty?
+  - return true/false if list is empty
+- #push
+  - add item to list
+- #peek
+  - return last value pushed to list
+- #head
+  - return first value of list
+- #pop
+  - remove head of list
+  - return that element's datum
+- ::from_a(arr)
+  - turn each value into an Element object
+  - store that as the instance variable array of elements
+    - add elements in reverse order of input array
+- #to_a
+  - return datum for each element of @list
+- #reverse
+  - create new SimpleLinkedList object
+    - extract #to_a from original object
+    - plug in that array to ::from_a

@@ -1,0 +1,66 @@
+Problem:
+- create a custom set type
+- Assume all elements must be a number
+
+Definitions:
+- subset = a subset of another set is one that has all values in commonof the 
+larger or same size set
+- disjoint = 2 sets have nothing in common
+- intersection = only the elements common to both sets
+- difference = elements that are in A that are not in B, when comparing
+B to A
+- union = combine the unique values of each set
+- set = a collection of unique elements
+  - in our case, a collection of unique integers
+
+Examples:
+- GIVEN
+
+Data Structure:
+- input: array of numbers into CustomSet object constructor
+- output: various method returns
+
+- empty? -> true/false depending on if set contains numbers or not
+- contains?(n) -> true/false depending on if set contains `n`
+- subset?(other_set) -> true/false depending on if `self` is a subset of `other_set`
+- disjoint?(other_set) -> true/false depending on if the 2 sets are disjoint
+- eql?(other_set) -> true/false depending on if 2 sets have exactly same values
+- add -> add the value (integer) to the set
+- intersection(other_set) -> elements that intersect between the 2 sets
+- difference(other_set) -> elements that are in original that aren't in other_set
+- union -> union of elements from both sets
+
+Algorithm:
+- constructor
+  - input of array
+    - set default input to `[]`
+  - call #uniq on array
+    - store as @set
+- empty?
+  - return true/false if @set array empty?
+- contains?(n)
+  - return true/false if @set array has `n`
+- subset?(other_set)
+  - set `var` to true
+  - iterate through @set
+    - break and set `var` to false if value is not in `other_set`
+  - return `var`
+- disjoint?(other_set)
+  - set `var` to true
+  - iterate through @set
+    - break and set `var` to false if value is in `other_set`
+  - return `var`
+- eql?(other_set)
+  - compare using #== and calling #set on `other_set`
+- add(n)
+  - add n to @set
+  - call #uniq! on @set
+- intersection(other_set)
+  - call #select on @set
+    - in block: value is in `other_set`
+- difference(other_set)
+  - call #select on @set
+    - in block: value is not in `other_set`
+- union(other_set)
+  - combine the 2 sets as new object
+  - call #uniq

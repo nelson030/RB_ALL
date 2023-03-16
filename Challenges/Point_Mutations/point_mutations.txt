@@ -1,0 +1,44 @@
+Understanding the problem
+- The program should calculate the Hamming distance between 2 DNA strands
+
+Definitions:
+- point mutation = one base with another at a single nucleotide
+- Hamming Distance = minimum number of point mutations that could have occured 
+on evolutionary path
+  - Determined by counting the number of differences on homologous DNA strands 
+  from dif genomes with the same ancestor
+  
+```
+GAGCCTACTAACGGGAT  <--- DNA strand from genome 1
+CATCGTAATGACGGCCT  <--- DNA strand from genome 2
+^ ^ ^  ^ ^    ^^
+```
+- Hamming distance = 7
+
+Requirements:
+- genomes must be same length
+  - if the 2 genomes are dif length, compute over the length of the smaller one
+
+Examples/test cases
+- GIVEN
+
+Data Structure
+- DNA class creates objects of DNA strands as Strings storing the String given
+as an input to the contructor
+  - string should be stored as public or protected
+- have a hamming function that returns the number correlating to the Hamming
+distance (of the object called on and the object given to the function)
+  - Have a seperate protected method to compare the two strings?
+
+Algorithm
+- Contructor
+  - store String representing DNA strand as protected instance variable
+- #hamming_distance
+  - use protected dna string of object AND use given string of another DNA
+  representation
+    - Input must be a string, NOT a DNA object
+  - create a while loop iterating until #length of smaller string
+  - return integer representing hamming distance
+  - no output needed
+
+Code

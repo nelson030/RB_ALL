@@ -1,0 +1,44 @@
+Understanding the Problem:
+
+- Determine whether a given triangle is equilateral, isosceles, or scalene.
+  - An equilateral triangle has all three sides the same length.
+  - An isosceles triangle has exactly two sides of the same length.
+  - A scalene triangle has all sides of different lengths.
+  
+Requirements
+- all sides must be of length > 0
+- and the sum of the lengths of any two sides must be greater than the length 
+of the third side.
+
+Questions:
+- How do we "receive" the triangle? Probably by defining the 3 side lengths.
+
+Examples/tests
+- GIVEN (triangles_test.rb)
+
+More Requirements
+- need a contructor with input of 3 side lengths
+- need an instance method `kind` returning string of type of triangle
+
+Data Structure
+- store `Triangle` objects in a local variable
+- When calling `kind` on a triangle object, we want a String returned (nothing
+needs to be printed)
+- Store instance variables of each side length to an array
+  - Will be read only
+  - Needed for `kind` method to evaluate triangle type
+
+Algorithm
+- constructor
+  - assign side lengths to array (attr_reader)
+  - return ArgumentError if
+    - all sides are not > 0
+    - largest side length is larger than (AND NOT EQUAL TO) sum of other 2 sides
+- `kind` method
+  - accesses instance variable array of side lengths
+  - determines what kind of triangle it is
+
+Question:
+- How to store formulas for the different types of triangles?
+
+Code

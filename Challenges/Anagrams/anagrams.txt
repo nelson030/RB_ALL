@@ -1,0 +1,29 @@
+Problem
+- Input a word and a list of words and return a list of words
+on the list that are anagrams of the given word
+
+- Anagram = a version of a word that uses the same exact letters
+(and quantity of letters) as a word
+
+Examples
+- GIVEN
+
+Data Structure
+- input = string and array of strings
+- print nothing
+- return = array
+  - default return is `[]`
+
+Algorithm
+- Contructor
+  - assign input string to a attr_reader :word
+- #match
+  - initialize empty array
+  - compare each string in input array to the :word string
+    - HOW?
+      - sort the two strings (#chars.sort)
+      - compare/return using #== and #select, respectively
+  - append anagram to empty array
+  - return anagram array
+
+Code

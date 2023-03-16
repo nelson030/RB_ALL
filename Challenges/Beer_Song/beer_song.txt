@@ -1,0 +1,22 @@
+Problem
+- Write a program that can generate the 
+lyrics of the 99 Bottles of Beer song
+
+Examples:
+- GIVEN
+
+Data Structure
+- input: integer (correlating to which line of song)
+- output: string (line(s) of song)
+
+Algorithm:
+- ::verse
+  - take an input of which line to start on and an optional
+  which one to end on
+  - iterate from line start to end
+    - store strings in an object
+  - return strings
+- ::lyrics
+  - print all lyrics
+
+Code
