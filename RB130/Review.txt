@@ -1,0 +1,12 @@
+Study Session
+
+# 1 => return behaves differently 
+#  .... lambda returns out of the lambda_return
+# ..... proc returns out of the method
+# 2 => arity difference
+# .... proc is lenient, lambda is strict 
+
+Method invocation adding `&` before variable turns proc -> block
+
+Extra Review:
+#26
